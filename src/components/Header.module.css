@@ -1,0 +1,162 @@
+.header {
+  height: 91px;
+  background: var(--color-teal);
+  box-shadow: inset 0 -8px 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 27px 0 26px;
+}
+
+/* The logo image is taller than the bar (110px vs 91px); the hero covers the overflow */
+.logo img {
+  height: 110px;
+  width: 165px;
+  object-fit: cover;
+}
+
+/* Desktop: the menu wrapper disappears so the nav and button sit in the bar's flex row */
+.menu {
+  display: contents;
+}
+
+.nav {
+  display: flex;
+  gap: 39px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.nav a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  transform: scale(1.12);
+}
+
+.contact {
+  background: var(--color-offwhite);
+  color: var(--color-teal);
+}
+
+.menuButton {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    gap: 24px;
+  }
+
+  .logo img {
+    width: 132px;
+    height: 88px;
+  }
+}
+
+/* Mobile: 94px bar with logo and hamburger; the links drop down below it */
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    z-index: 10;
+    height: 94px;
+  }
+
+  .inner {
+    padding: 0 24px 0 0;
+  }
+
+  .logo img {
+    width: 114px;
+    height: 76px;
+  }
+
+  .menuButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 37px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .menuButton span {
+    width: 40px;
+    height: 5px;
+    border-radius: 2.5px;
+    background: var(--color-offwhite);
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  /* Hamburger turns into a cross while the menu is open */
+  .menuButton.open span:nth-child(1) {
+    transform: translateY(16px) rotate(45deg);
+  }
+
+  .menuButton.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menuButton.open span:nth-child(3) {
+    transform: translateY(-16px) rotate(-45deg);
+  }
+
+  .menuButton:focus-visible {
+    outline: 2px solid var(--color-offwhite);
+    outline-offset: 4px;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 24px 32px;
+    background: var(--color-teal);
+    box-shadow: inset 0 8px 6px -6px rgba(0, 0, 0, 0.25);
+    border-bottom: 5px solid var(--color-orange);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s;
+  }
+
+  .menu.open {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu,
+  .menuButton span {
+    transition: none;
+  }
+}

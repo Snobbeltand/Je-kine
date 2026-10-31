@@ -1,0 +1,226 @@
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--color-orange);
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  /* 817px at the 1440px design width, scaling down proportionally below it */
+  height: min(817px, 56.75vw);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(99, 99, 99, 0.5);
+}
+
+.heroTitle {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 64px;
+  color: var(--color-offwhite);
+  text-align: center;
+}
+
+/* Welcome */
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  min-height: 442px;
+  padding: 97px var(--gutter-right) 64px var(--gutter-left);
+  background: var(--color-teal);
+  color: var(--color-offwhite);
+}
+
+.welcomeLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  max-width: 552px;
+}
+
+.welcomeRight {
+  max-width: 586px;
+}
+
+.welcomeRight p + p {
+  margin-top: 1lh;
+}
+
+/* Therapists */
+
+.therapists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 621px;
+  margin-top: 2px;
+  padding: 65px 32px 27px;
+  background: var(--color-offwhite);
+}
+
+.therapistList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(48px, 22vw, 317px);
+  max-width: 100%;
+  margin-top: 70px;
+  color: var(--color-teal);
+  text-align: center;
+}
+
+.therapist {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 382px;
+  white-space: pre-wrap;
+}
+
+.therapistName {
+  font-size: 36px;
+}
+
+.more {
+  margin-top: auto;
+  background: var(--color-teal);
+  color: var(--color-offwhite);
+}
+
+/* Tablet: title across the top, the two text blocks in equal columns below */
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 52px;
+  }
+
+  .welcome {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "title title"
+      "left right";
+    gap: 28px 48px;
+    min-height: 0;
+    padding: 64px 48px;
+  }
+
+  .welcomeLeft {
+    display: contents;
+  }
+
+  .welcomeLeft > :first-child {
+    grid-area: title;
+  }
+
+  .welcomeLeft > :last-child {
+    grid-area: left;
+  }
+
+  .welcomeRight {
+    grid-area: right;
+    max-width: none;
+  }
+
+  .therapists {
+    min-height: 0;
+    padding: 56px 32px 48px;
+  }
+
+  .therapistList {
+    margin: 48px 0;
+  }
+
+  .therapist {
+    gap: 20px;
+  }
+
+  .therapistName {
+    font-size: 30px;
+  }
+}
+
+/* Mobile (Android Compact frame, 412px) */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .hero {
+    height: 275px;
+    padding: 0 16px;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 19px;
+    min-height: 459px;
+    padding: 26px 30px 42px;
+    text-align: center;
+  }
+
+  .welcomeLeft {
+    gap: 20px;
+    max-width: 351px;
+  }
+
+  .welcomeRight {
+    max-width: 351px;
+  }
+
+  .therapists {
+    min-height: 605px;
+    margin-top: 0;
+    padding: 28px 0 29px;
+  }
+
+  .therapistList {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    margin: 28px 0 0;
+  }
+
+  .therapist {
+    gap: 17px;
+    width: auto;
+    padding: 0 30px;
+  }
+
+  /* Full-width orange divider between the two therapists */
+  .therapist + .therapist {
+    margin-top: 34px;
+    padding-top: 39px;
+    border-top: 5px solid var(--color-orange);
+  }
+
+  .therapistName {
+    font-size: 20px;
+  }
+
+  .more {
+    width: 132px;
+    height: 32px;
+    margin-top: 39px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,293 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 853px;
+  padding: 34px 32px 47px;
+  background: var(--color-offwhite);
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 64px;
+  color: var(--color-orange);
+}
+
+.lead {
+  color: var(--color-teal);
+}
+
+/* Card: form on the left, map on the right, orange frame drawn over both */
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 1325px;
+  height: 572px;
+  margin-top: 30px;
+  background: var(--color-teal);
+  text-align: left;
+}
+
+/* The frame sits outside the card, as in the design */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 5px solid var(--color-orange);
+  pointer-events: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  width: 549px;
+  margin: 28px 0 0 52px;
+}
+
+.formTitle {
+  margin-bottom: -7px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--color-orange);
+}
+
+.botcheck {
+  display: none;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: var(--color-offwhite);
+}
+
+.field input,
+.field textarea {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 0 12px;
+  border: 3px solid var(--color-orange);
+  border-radius: 0;
+  background: var(--color-offwhite);
+  color: var(--color-teal);
+  font: inherit;
+}
+
+.field textarea {
+  height: 138px;
+  padding: 8px 12px;
+  resize: none;
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  outline: 2px solid var(--color-offwhite);
+  outline-offset: 2px;
+}
+
+.messageWrapper {
+  position: relative;
+}
+
+/* The send button overlaps the bottom-right corner of the question field */
+.send {
+  position: absolute;
+  right: -37px;
+  bottom: -27px;
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  padding: 0;
+  border: 5px solid var(--color-orange);
+  background: var(--color-teal);
+  color: #fff;
+  font-family: "Homemade Apple", var(--font-body);
+  font-size: 128px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.send span {
+  translate: 0 -6px;
+}
+
+.send {
+  transition: background-color 0.2s ease;
+}
+
+.send:hover {
+  background: var(--color-orange);
+}
+
+.send:focus-visible {
+  outline: 2px solid var(--color-offwhite);
+  outline-offset: 2px;
+}
+
+.send:disabled {
+  cursor: wait;
+}
+
+.status {
+  margin-top: -6px;
+  font-size: 18px;
+  color: var(--color-offwhite);
+}
+
+.status:empty {
+  display: none;
+}
+
+.map {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 669px;
+}
+
+.map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  position: absolute;
+  right: 0;
+  bottom: 34px;
+  width: 482px;
+  min-height: 273px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 21px 22px 23px;
+  background: var(--color-teal);
+  color: var(--color-offwhite);
+  font-style: normal;
+}
+
+.infoTitle {
+  font-size: 36px;
+  color: var(--color-orange);
+}
+
+.infoSubtitle {
+  font-size: 32px;
+  color: var(--color-orange);
+}
+
+.phones {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 35px;
+}
+
+.phones a:hover {
+  text-decoration: underline;
+}
+
+/* Narrower screens: form on top, map below it with the info box overlapping */
+@media (max-width: 1300px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    max-width: 680px;
+    height: auto;
+  }
+
+  .form {
+    width: auto;
+    max-width: 549px;
+    margin: 28px 52px 56px;
+  }
+
+  .map {
+    position: static;
+    width: 100%;
+    height: 420px;
+  }
+}
+
+/* Mobile (Android Compact frame, 412px) */
+@media (max-width: 768px) {
+  .contact {
+    min-height: 1176px;
+    padding: 34px 40px 52px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .lead {
+    max-width: 332px;
+    font-size: 20px;
+  }
+
+  .card {
+    max-width: 332px;
+    margin-top: 99px;
+  }
+
+  .form {
+    gap: 18px;
+    margin: 25px 28px 40px 14px;
+  }
+
+  .formTitle {
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+
+  .field textarea {
+    height: 138px;
+  }
+
+  .send {
+    right: -17px;
+    bottom: -26px;
+    width: 35px;
+    height: 35px;
+    border-width: 3px;
+    font-size: 48px;
+  }
+
+  .send span {
+    translate: 0 -2px;
+  }
+
+  .status {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+
+  .map {
+    height: 341px;
+  }
+
+  .info {
+    bottom: 20px;
+    width: 242px;
+    min-height: 163px;
+    gap: 4px;
+    padding: 12px 0 12px 12px;
+    white-space: nowrap;
+  }
+
+  .infoTitle,
+  .infoSubtitle {
+    font-size: 20px;
+  }
+
+  .phones {
+    line-height: 20px;
+  }
+}

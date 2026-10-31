@@ -1,0 +1,338 @@
+/* Intro */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 451px;
+  padding: 63px 32px 53px;
+  background: var(--color-offwhite);
+  border-bottom: 10px solid var(--color-orange);
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 64px;
+  color: var(--color-orange);
+}
+
+.lead {
+  max-width: 750px;
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  color: var(--color-teal);
+}
+
+/* Therapist bios: 61px left margin, photo ends 184px from the right edge */
+
+.bio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 33px max(184px, (100% - var(--page-width)) / 2 + 184px) 33px
+    max(61px, (100% - var(--page-width)) / 2 + 61px);
+}
+
+.bioDark {
+  min-height: 516px;
+  background: var(--color-teal);
+  color: var(--color-offwhite);
+}
+
+.bioLight {
+  min-height: 462px;
+  background: var(--color-offwhite);
+  border-bottom: 10px solid var(--color-orange);
+  color: var(--color-teal);
+}
+
+.bioText {
+  max-width: 621px;
+  line-height: 30px;
+  white-space: pre-wrap;
+}
+
+.bioDark .bioText {
+  max-width: 614px;
+}
+
+.bioText p + p {
+  margin-top: 30px;
+}
+
+.name {
+  text-decoration: underline;
+}
+
+.photo {
+  flex-shrink: 0;
+}
+
+/* Specialisations */
+
+.specialisations {
+  padding: 59px 32px 93px;
+  background: var(--color-offwhite);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 30px;
+  color: var(--color-orange);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 341px);
+  justify-content: center;
+  align-items: start;
+  gap: 77px 64px;
+  margin-top: 200px;
+}
+
+/* A lone card in the last row sits in the middle column */
+.card:last-child:nth-child(3n + 1) {
+  grid-column: 2;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 29px;
+  text-align: center;
+}
+
+/* Reserve two lines so descriptions line up when a title wraps */
+.cardTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2lh;
+  font-size: 32px;
+  color: var(--color-orange);
+}
+
+.chevron {
+  display: grid;
+  place-items: center;
+  width: 63px;
+  height: 63px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.chevron img {
+  transition: transform 0.3s ease;
+}
+
+.chevron.open img {
+  transform: rotate(180deg);
+}
+
+.chevron:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+/* Animating from 0fr to 1fr slides the text open to its natural height */
+.cardTextWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease;
+}
+
+.cardTextWrapper.open {
+  grid-template-rows: 1fr;
+}
+
+.cardText {
+  min-height: 0;
+  overflow: hidden;
+  color: var(--color-teal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chevron img,
+  .cardTextWrapper {
+    transition: none;
+  }
+}
+
+.cardText p + p {
+  margin-top: 1lh;
+}
+
+/* Tablet: two columns of specialisations, lone last card centered */
+@media (max-width: 1215px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 341px));
+  }
+
+  .card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
+  }
+
+  .card:last-child:nth-child(2n + 1) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(341px, 100%);
+  }
+
+  .bio {
+    padding-inline: 48px;
+  }
+
+  .photo {
+    width: 260px;
+    height: 260px;
+  }
+
+  .grid {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro {
+    min-height: 0;
+    padding-bottom: 56px;
+  }
+
+  .lead {
+    font-size: 34px;
+    line-height: 52px;
+  }
+
+  .bio {
+    padding-block: 48px;
+  }
+
+  .bioDark,
+  .bioLight {
+    min-height: 0;
+  }
+
+  .photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .specialisations {
+    padding-bottom: 72px;
+  }
+
+  .grid {
+    margin-top: 72px;
+  }
+
+  .card > img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .cardTitle {
+    font-size: 28px;
+  }
+}
+
+/* Mobile (Android Compact frame, 412px) */
+@media (max-width: 768px) {
+  .intro {
+    min-height: 328px;
+    padding: 34px 32px 28px;
+    border-bottom-width: 5px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .lead {
+    max-width: 347px;
+    margin-top: 23px;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.72px;
+  }
+
+  .bio {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 37px;
+    padding: 21px 32px 25px;
+    text-align: center;
+  }
+
+  .bioDark {
+    min-height: 699px;
+  }
+
+  .bioLight {
+    min-height: 576px;
+    border-bottom-width: 5px;
+  }
+
+  .bioText,
+  .bioDark .bioText {
+    max-width: 347px;
+  }
+
+  .photo {
+    width: 136px;
+    height: 136px;
+  }
+
+  .specialisations {
+    padding: 21px 32px 41px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 347px);
+    gap: 37px;
+    margin-top: 40px;
+  }
+
+  .card:last-child:nth-child(2n + 1) {
+    width: auto;
+  }
+
+  .card {
+    gap: 21px;
+  }
+
+  .card > img {
+    width: 136px;
+    height: 136px;
+  }
+
+  .cardTitle {
+    min-height: 0;
+    font-size: 24px;
+  }
+
+  .chevron {
+    width: 37px;
+    height: 37px;
+  }
+
+  .chevron img {
+    width: 16.6px;
+    height: 19.7px;
+  }
+}

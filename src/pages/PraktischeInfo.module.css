@@ -1,0 +1,449 @@
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 30px;
+  color: var(--color-orange);
+}
+
+.dark {
+  background: var(--color-teal);
+  color: var(--color-offwhite);
+}
+
+.light {
+  background: var(--color-offwhite);
+  color: var(--color-teal);
+}
+
+.intro,
+.block,
+.tarieven,
+.bereikbaarheid {
+  border-bottom: 10px solid var(--color-orange);
+}
+
+/* Intro with links to each section */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+  min-height: 380px;
+  padding: 35px 42px 66px;
+  background: var(--color-offwhite);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 64px;
+  color: var(--color-orange);
+}
+
+.toc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 77px;
+  width: 100%;
+  max-width: 1356px;
+  font-size: 36px;
+  color: var(--color-teal);
+  white-space: nowrap;
+}
+
+.tocRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tocRow + .tocRow {
+  max-width: 814px;
+}
+
+.toc a {
+  transition: color 0.2s ease;
+}
+
+.toc a:hover,
+.toc a:focus-visible {
+  color: var(--color-orange);
+  text-decoration: underline;
+}
+
+/* Centered text blocks: Openingsuren, Annulatie, Eerste Consultatie */
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  min-height: 269px;
+  padding: 48px 32px 39px;
+  text-align: center;
+}
+
+.openingsuren {
+  min-height: 375px;
+}
+
+.blockText {
+  max-width: 745px;
+  line-height: 30px;
+}
+
+.blockText p + p {
+  margin-top: 30px;
+}
+
+.wide {
+  max-width: 805px;
+}
+
+.narrowBlock {
+  max-width: 653px;
+}
+
+/* Tarieven */
+
+.tarieven {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  min-height: 405px;
+  padding: 47px max(58px, (100% - var(--page-width)) / 2 + 58px) 34px
+    max(42px, (100% - var(--page-width)) / 2 + 42px);
+}
+
+.tarievenText {
+  max-width: 874px;
+  line-height: 30px;
+  white-space: pre-wrap;
+}
+
+.tarievenText h2 {
+  margin-bottom: 44px;
+}
+
+.tarievenText p + p {
+  margin-top: 30px;
+}
+
+.link {
+  color: var(--color-orange);
+  text-decoration: underline;
+}
+
+.bancontact {
+  flex-shrink: 0;
+  margin-top: 74px;
+}
+
+/* Bereikbaarheid */
+
+.bereikbaarheid {
+  min-height: 962px;
+  padding: 34px 0 25px;
+  text-align: center;
+}
+
+.travelGrid {
+  display: grid;
+  grid-template-columns: 550px 358px;
+  grid-template-areas:
+    "voet fiets"
+    "auto ov"
+    "kaart ov";
+  justify-content: space-between;
+  align-items: start;
+  row-gap: 19px;
+  margin: 93px max(112px, (100% - var(--page-width)) / 2 + 112px) 0
+    max(42px, (100% - var(--page-width)) / 2 + 42px);
+}
+
+.voet {
+  grid-area: voet;
+}
+
+.fiets {
+  grid-area: fiets;
+}
+
+.auto {
+  grid-area: auto;
+}
+
+.ov {
+  grid-area: ov;
+}
+
+.kaart {
+  grid-area: kaart;
+  margin-top: 16px;
+}
+
+.travel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  line-height: 30px;
+}
+
+.travel h3 {
+  font-size: 32px;
+  color: var(--color-orange);
+}
+
+.travel p + p {
+  margin-top: 30px;
+}
+
+.auto,
+.ov {
+  gap: 17px;
+}
+
+.narrow {
+  max-width: 307px;
+}
+
+/* The map is wider than its column and starts at the column's left edge */
+.kaart {
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.kaart h3 {
+  align-self: center;
+}
+
+.kaart img {
+  width: 685px;
+  max-width: none;
+  height: 353px;
+  object-fit: cover;
+}
+
+/* Orange frame and a label on hover make it clear the map opens Google Maps */
+.mapLink {
+  position: relative;
+  display: block;
+  outline: 0 solid var(--color-orange);
+  transition: outline-width 0.2s ease;
+}
+
+.mapLink:hover,
+.mapLink:focus-visible {
+  outline-width: 5px;
+}
+
+.mapHint {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  translate: -50% 0;
+  padding: 8px 20px;
+  border-radius: 50px;
+  background: var(--color-orange);
+  color: #fff;
+  font-size: 20px;
+  line-height: normal;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.mapLink:hover .mapHint,
+.mapLink:focus-visible .mapHint {
+  opacity: 1;
+}
+
+/* Tablet: fluid columns, map scales with its column */
+@media (max-width: 1100px) {
+  /* The two rows merge into one centered, wrapping group of links */
+  .toc {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 48px;
+    font-size: 30px;
+  }
+
+  .tocRow {
+    display: contents;
+  }
+
+  .intro {
+    min-height: 0;
+    padding-bottom: 56px;
+  }
+
+  .bereikbaarheid {
+    min-height: 0;
+    padding-bottom: 64px;
+  }
+
+  .travelGrid {
+    margin-top: 64px;
+  }
+
+  .tarieven {
+    padding-inline: 48px;
+  }
+
+  .bancontact {
+    width: 240px;
+    height: auto;
+  }
+
+  .travelGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 48px;
+    margin-inline: 48px;
+  }
+
+  .kaart img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 685 / 353;
+  }
+
+  .mapLink {
+    width: 100%;
+  }
+}
+
+/* Mobile (Android Compact frame, 412px) */
+@media (max-width: 768px) {
+  .intro,
+  .block,
+  .tarieven,
+  .bereikbaarheid {
+    border-bottom-width: 5px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .intro {
+    gap: 18px;
+    min-height: 327px;
+    padding: 34px 32px 33px;
+  }
+
+  .toc,
+  .tocRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+  }
+
+  .toc {
+    font-size: 24px;
+  }
+
+  .tocRow + .tocRow {
+    max-width: none;
+  }
+
+  .block {
+    gap: 18px;
+    min-height: 188px;
+    padding: 21px 32px 37px;
+  }
+
+  .openingsuren {
+    min-height: 325px;
+  }
+
+  .blockText,
+  .wide,
+  .narrowBlock {
+    max-width: 347px;
+  }
+
+  .tarieven {
+    flex-direction: column;
+    align-items: center;
+    gap: 41px;
+    min-height: 679px;
+    padding: 21px 32px 5px;
+    text-align: center;
+  }
+
+  .tarievenText {
+    max-width: 347px;
+  }
+
+  .tarievenText h2 {
+    margin-bottom: 18px;
+  }
+
+  .bancontact {
+    width: 338px;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .bereikbaarheid {
+    min-height: 0;
+    padding: 21px 0 41px;
+  }
+
+  .travelGrid {
+    grid-template-columns: minmax(0, 347px);
+    grid-template-areas:
+      "voet"
+      "fiets"
+      "auto"
+      "ov"
+      "kaart";
+    justify-content: center;
+    row-gap: 15px;
+    margin: 44px 32px 0;
+  }
+
+  .travel,
+  .auto,
+  .ov {
+    gap: 0;
+  }
+
+  .travel h3 {
+    font-size: 24px;
+  }
+
+  .narrow {
+    max-width: none;
+  }
+
+  .kaart {
+    align-items: center;
+    gap: 13px;
+    margin-top: 0;
+  }
+
+  .mapLink {
+    width: 322px;
+    max-width: 100%;
+  }
+
+  .kaart img {
+    aspect-ratio: 322 / 226;
+  }
+
+  .mapHint {
+    font-size: 16px;
+  }
+}
