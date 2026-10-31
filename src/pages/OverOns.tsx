@@ -1,14 +1,14 @@
 import { useId, useState } from "react";
-import cynthia from "../assets/over-ons/cynthia.png";
-import naima from "../assets/over-ons/naima.png";
+import cynthia from "../assets/over-ons/cynthia.webp";
+import naima from "../assets/over-ons/naima.webp";
 import chevron from "../assets/over-ons/chevron-down-double.svg";
-import myofasciale from "../assets/over-ons/myofasciale-therapie.png";
-import lymfdrainage from "../assets/over-ons/manuele-lymfdrainage.png";
-import manueleTherapie from "../assets/over-ons/manuele-therapie.png";
-import handrevalidatie from "../assets/over-ons/handrevalidatie.png";
-import littekenbehandeling from "../assets/over-ons/littekenbehandeling.png";
-import taping from "../assets/over-ons/taping.png";
-import kinesiologie from "../assets/over-ons/kinesiologie.png";
+import myofasciale from "../assets/over-ons/myofasciale-therapie.webp";
+import lymfdrainage from "../assets/over-ons/manuele-lymfdrainage.webp";
+import manueleTherapie from "../assets/over-ons/manuele-therapie.webp";
+import handrevalidatie from "../assets/over-ons/handrevalidatie.webp";
+import littekenbehandeling from "../assets/over-ons/littekenbehandeling.webp";
+import taping from "../assets/over-ons/taping.webp";
+import kinesiologie from "../assets/over-ons/kinesiologie.webp";
 import styles from "./OverOns.module.css";
 
 type Specialisation = {

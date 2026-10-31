@@ -1,6 +1,6 @@
 import type { MouseEvent } from "react";
-import bancontact from "../assets/praktische-info/betaling.png";
-import kaart from "../assets/praktische-info/kaart.png";
+import bancontact from "../assets/praktische-info/betaling.webp";
+import kaart from "../assets/praktische-info/kaart.webp";
 import { mapsUrl } from "../maps";
 import styles from "./PraktischeInfo.module.css";
 

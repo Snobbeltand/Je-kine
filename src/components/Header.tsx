@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router";
-import logo from "../assets/logo-wit.png";
+import logo from "../assets/logo-wit.webp";
 import styles from "./Header.module.css";
 
 export default function Header() {

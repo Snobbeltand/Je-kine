@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import OverOns from "./pages/OverOns";
 import PraktischeInfo from "./pages/PraktischeInfo";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: "/over-ons", element: <OverOns /> },
       { path: "/praktische-info", element: <PraktischeInfo /> },
       { path: "/contact", element: <Contact /> },
+      { path: "*", element: <NotFound /> },
     ],
   },
 ]);

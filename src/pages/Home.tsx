@@ -1,10 +1,10 @@
 import { Link } from "react-router";
 import HeroCarousel from "../components/HeroCarousel";
-import hero1 from "../assets/hero-1.jpg";
-import hero2 from "../assets/hero-2.jpg";
-import hero3 from "../assets/hero-3.jpg";
-import hero4 from "../assets/hero-4.jpg";
-import hero5 from "../assets/hero-5.jpg";
+import hero1 from "../assets/hero-1.webp";
+import hero2 from "../assets/hero-2.webp";
+import hero3 from "../assets/hero-3.webp";
+import hero4 from "../assets/hero-4.webp";
+import hero5 from "../assets/hero-5.webp";
 import styles from "./Home.module.css";
 
 const heroSlides = [

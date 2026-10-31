@@ -12,6 +12,15 @@ dist
 dist-ssr
 *.local
 
+# Environment variables (set VITE_WEB3FORMS_KEY in Netlify instead)
+.env
+
+# Uncompressed source images, kept locally only
+design-originals
+
+# Local Netlify CLI folder
+.netlify
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

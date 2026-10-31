@@ -1,0 +1,32 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 60vh;
+  padding: 64px 32px;
+  background: var(--color-offwhite);
+  color: var(--color-teal);
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--color-orange);
+}
+
+.home {
+  width: auto;
+  padding: 0 32px;
+  background: var(--color-teal);
+  color: var(--color-offwhite);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+}

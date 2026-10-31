@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import kaart from "../assets/praktische-info/kaart.png";
+import kaart from "../assets/praktische-info/kaart.webp";
 import { mapsUrl } from "../maps";
 import styles from "./Contact.module.css";
 
