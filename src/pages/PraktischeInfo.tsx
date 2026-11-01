@@ -12,7 +12,6 @@ const sections = [
   { id: "bereikbaarheid", label: "Bereikbaarheid" },
 ];
 
-
 function scrollToSection(event: MouseEvent<HTMLAnchorElement>, id: string) {
   event.preventDefault();
   const reduceMotion = window.matchMedia(
@@ -57,7 +56,7 @@ export default function PraktischeInfo() {
           </p>
           <p>
             U kunt een afspraak maken op maandag-donderdag tussen 8:00 en 20:00
-            en vrijdag tussen 8:00 en 15:00. Wij werken in vakanties, maar niet
+            en vrijdag tussen 8:00 en 17:00. Wij werken in vakanties, maar niet
             op feestdagen.
           </p>
         </div>
@@ -156,9 +155,7 @@ export default function PraktischeInfo() {
               <p>Opgelet! check altijd tijdig de tijdstippen.</p>
             </div>
           </div>
-          <div
-            className={`${styles.travel} ${styles.kaart}`}
-          >
+          <div className={`${styles.travel} ${styles.kaart}`}>
             <h3>Kaart</h3>
             <a
               href={mapsUrl}

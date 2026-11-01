@@ -26,7 +26,7 @@ const therapists = [
     ],
   },
   {
-    name: "Naima Meerschout",
+    name: "Naima Meersschaut",
     details: [
       "Rizivnr  5-51237-14-527",
       "Ondernemingsnr  BE0805149983",
