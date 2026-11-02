@@ -107,7 +107,9 @@ export default function PraktischeInfo() {
               www.riziv.fgov.be
             </a>
           </p>
-          <p>Voor uw en onze veiligheid betaalt u bij voorkeur met</p>
+          <p>
+            Voor uw en onze veiligheid betaalt u bij voorkeur met bancontact
+          </p>
         </div>
         <img
           src={bancontact}
