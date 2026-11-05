@@ -18,6 +18,19 @@
   box-sizing: border-box;
 }
 
+/* Keep the footer at the bottom of the window on pages shorter than the screen */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+main {
+  flex: 1;
+  background: var(--color-offwhite);
+}
+
 body {
   margin: 0;
   background: #fff;
