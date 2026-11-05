@@ -1,0 +1,21 @@
+{
+  "siteUrl": "https://je-kine.be",
+  "pages": {
+    "/": {
+      "title": "Je Kiné | Kinesitherapie in Oostakker",
+      "description": "Je Kiné is een kinesitherapiepraktijk in Oostakker voor professionele en individuele behandeling op maat. Ooistraat 35, 9041 Oostakker. Afspraken via 09 329 00 64."
+    },
+    "/over-ons": {
+      "title": "Over Ons | Je Kiné, kinesitherapeuten in Oostakker",
+      "description": "Maak kennis met onze kinesitherapeuten en specialisaties: myofasciale therapie en dry needling, manuele therapie, lymfdrainage Vodder, handrevalidatie, littekenbehandeling, taping en kinesiologie."
+    },
+    "/praktische-info": {
+      "title": "Praktische Info | Je Kiné, kinesitherapie Oostakker",
+      "description": "Openingsuren, annulatie, eerste consultatie, tarieven en bereikbaarheid van kinesitherapiepraktijk Je Kiné in Oostakker."
+    },
+    "/contact": {
+      "title": "Contact | Je Kiné, kinesitherapie Oostakker",
+      "description": "Maak een afspraak bij Je Kiné via 09 329 00 64 of stel je vraag via het contactformulier. Ooistraat 35, 9041 Oostakker."
+    }
+  }
+}

@@ -3,20 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title, description, canonical and og:title/description/url are filled in
+         per page from src/seo-pages.json (at build time and when navigating) -->
     <title>Je Kiné | Kinesitherapie in Oostakker</title>
     <meta
       name="description"
       content="Je Kiné is een kinesitherapiepraktijk in Oostakker voor professionele en individuele behandeling op maat. Ooistraat 35, 9041 Oostakker. Afspraken via 09 329 00 64."
     />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://je-kine.be/" />
     <meta name="theme-color" content="#00708b" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="nl_BE" />
+    <meta property="og:site_name" content="Je Kiné" />
+    <meta property="og:url" content="https://je-kine.be/" />
     <meta property="og:title" content="Je Kiné | Kinesitherapie in Oostakker" />
     <meta
       property="og:description"
-      content="Professionele en individuele kinesitherapie op maat, nabij het centrum van Oostakker."
+      content="Je Kiné is een kinesitherapiepraktijk in Oostakker voor professionele en individuele behandeling op maat. Ooistraat 35, 9041 Oostakker. Afspraken via 09 329 00 64."
     />
+    <meta property="og:image" content="https://je-kine.be/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Structured data: tells search engines this is a physiotherapy practice -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Physiotherapy",
+        "name": "Je Kiné",
+        "url": "https://je-kine.be/",
+        "image": "https://je-kine.be/og-image.jpg",
+        "telephone": "+3293290064",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Ooistraat 35",
+          "postalCode": "9041",
+          "addressLocality": "Oostakker",
+          "addressRegion": "Oost-Vlaanderen",
+          "addressCountry": "BE"
+        },
+        "areaServed": ["Oostakker", "Gent"],
+        "employee": [
+          {
+            "@type": "Person",
+            "name": "Cynthia Buysse",
+            "jobTitle": "Kinesitherapeut",
+            "telephone": "+32498459455"
+          },
+          {
+            "@type": "Person",
+            "name": "Naima Meersschaut",
+            "jobTitle": "Kinesitherapeut",
+            "telephone": "+32471451203"
+          }
+        ],
+        "knowsAbout": [
+          "Myofasciale therapie",
+          "Dry needling",
+          "Manuele therapie",
+          "Manuele lymfdrainage Vodder",
+          "Handrevalidatie",
+          "Littekenbehandeling",
+          "Taping",
+          "Kinesiologie"
+        ]
+      }
+    </script>
 
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="shortcut icon" href="/favicon.ico" />
