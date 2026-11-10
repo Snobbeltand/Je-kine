@@ -77,7 +77,7 @@ const specialisations: Specialisation[] = [
     title: "Taping",
     icon: taping,
     description: [
-      ["Taping We gebruiken zowel klassieke kinesiotape als dynamic tape."],
+      ["We gebruiken zowel klassieke kinesiotape als dynamic tape."],
       [
         "Kinesiotape is een elastische tape die spieren op een correcte manier ondersteunt. Ze kan pijn verminderen, spanning reguleren, gewrichten ondersteunen en de bloed‑ en lymfestroom bevorderen.",
       ],
