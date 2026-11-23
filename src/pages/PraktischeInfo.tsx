@@ -50,15 +50,13 @@ export default function PraktischeInfo() {
       >
         <h2 className={styles.sectionTitle}>Openingsuren</h2>
         <div className={styles.blockText}>
-          <p>
-            Wij werken enkel op afspraak. Een afspraak kunt u enkel telefonisch
-            maken.
-          </p>
-          <p>
-            U kunt een afspraak maken op maandag-donderdag tussen 8:00 en 20:00
-            en vrijdag tussen 8:00 en 17:00. Wij werken in vakanties, maar niet
-            op feestdagen.
-          </p>
+          <p>Wij werken enkel op afspraak.</p>
+          <p>Een afspraak kunt u enkel telefonisch maken.</p>
+          <ul className={styles.dashList}>
+            <li>maandag-donderdag tussen 8:00 en 20:00</li>
+            <li>vrijdag tussen 8:00 en 17:00</li>
+          </ul>
+          <p>Wij werken in vakanties, maar niet op feestdagen.</p>
         </div>
       </section>
 
@@ -80,8 +78,8 @@ export default function PraktischeInfo() {
         <h2 className={styles.sectionTitle}>Eerste Consultatie</h2>
         <div className={`${styles.blockText} ${styles.narrowBlock}`}>
           <p>
-            Bij de eerste consultatie gelieve identiteitskaart, voorschrift en
-            eventuele verslagen van onderzoek mee te brengen
+            Bij de eerste consultatie gelieve uw identiteitskaart, voorschrift
+            en eventuele verslagen van onderzoek mee te brengen.
           </p>
         </div>
       </section>
@@ -108,7 +106,7 @@ export default function PraktischeInfo() {
             </a>
           </p>
           <p>
-            Voor uw en onze veiligheid betaalt u bij voorkeur met bancontact
+            Voor uw en onze veiligheid betaalt u bij voorkeur met Bancontact
           </p>
         </div>
         <img
@@ -128,19 +126,19 @@ export default function PraktischeInfo() {
         <div className={styles.travelGrid}>
           <div className={`${styles.travel} ${styles.voet}`}>
             <h3>Te voet</h3>
-            <p>Vlot, eenvoudig en gezond</p>
+            <p>Vlot, eenvoudig en gezond.</p>
           </div>
           <div className={`${styles.travel} ${styles.fiets}`}>
             <h3>Fiets</h3>
             <p>
               De praktijk is gemakkelijk bereikbaar met de fiets. Je kunt de
-              fiets in het fietsenrek naast de parking stallen.
+              fiets in de fietsbeugel naast de parking stallen.
             </p>
           </div>
           <div className={`${styles.travel} ${styles.auto}`}>
             <h3>Auto</h3>
             <p className={styles.narrow}>
-              Er is parking voorzien voor de patiënten van onze praktijk
+              Er is parking voorzien voor de patiënten van onze praktijk.
             </p>
           </div>
           <div className={`${styles.travel} ${styles.ov}`}>
@@ -148,13 +146,13 @@ export default function PraktischeInfo() {
             <div>
               <p>
                 De praktijk ligt op 10 minuten wandelen van halte Oostakker
-                dorp. Hier stoppen de lijnen 12b, 70, 71, 737, 738, 741.
+                Dorp. Hier stoppen de lijnen 12b, 70, 71, 737, 738, 741.
               </p>
               <p>
-                Van halte Oostakker kerkhof is het 5 minuten wandelen naar onze
-                praktijk. hier stoppen de lijnen 737, 738, 741.
+                Van halte Oostakker Kerkhof is het 5 minuten wandelen naar onze
+                praktijk. Hier stoppen de lijnen 737, 738, 741.
               </p>
-              <p>Opgelet! check altijd tijdig de tijdstippen.</p>
+              <p>Opgelet! Check altijd tijdig de uurregeling.</p>
             </div>
           </div>
           <div className={`${styles.travel} ${styles.kaart}`}>

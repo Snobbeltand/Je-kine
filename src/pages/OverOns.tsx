@@ -156,13 +156,20 @@ export default function OverOns() {
         <div className={styles.bioText}>
           <p>
             <span className={styles.name}>Cynthia Buysse</span> studeerde af in
-            1995. Zij deed ervaring op bij verschillende collega's.
+            1995 en deed ervaring op bij verschillende collega's.
           </p>
           <p>
             {
-              "In september 2002 startte zij een eigen praktijk te Oostakker . Ze volgde diverse kortlopende opleidingen  en  enkele intensieve specialisaties: bewegingsconsulent (1999-2000) manuele lymfdrainage Vodder (2005-2006), manuele therapie (2014-2016), myofasciale therapie (2017-2018) en handrevalidatie (2022-2023)"
+              "In september 2002 startte zij een eigen praktijk te Oostakker. Ze volgde diverse kortlopende opleidingen en enkele intensieve specialisaties:"
             }
           </p>
+          <ul className={styles.dashList}>
+            <li>{"bewegingsconsulent (1999-2000)"}</li>
+            <li>{"manuele lymfdrainage Vodder (2005-2006)"}</li>
+            <li>{"manuele therapie (2014-2016)"}</li>
+            <li>{"myofasciale therapie (2017-2018)"}</li>
+            <li>{"handrevalidatie (2022-2023)"}</li>
+          </ul>
           <p>
             {
               "Zij is in het  bezit van het kwaliteitslabel Pro-q-kiné en de bijzondere beroepsbekwaamheid als manueel therapeut. Zij is ook lid van de beroepsvereniging AXXON."
@@ -181,10 +188,10 @@ export default function OverOns() {
       <section className={`${styles.bio} ${styles.bioLight}`}>
         <div className={styles.bioText}>
           <p>
-            <span className={styles.name}>Naima Meersschaut</span> heeft
-            eveneens een geslaagde stage bij ons achter de rug. Ze behaalde haar
-            diploma in de revalidatiewetenschappen aan de Universiteit van Gent,
-            waarna ze in oktober 2023 enthousiast bij ons team aansloot.
+            <span className={styles.name}>Naima Meersschaut</span> heeft een
+            geslaagde stage bij ons achter de rug. Ze behaalde haar diploma in
+            de revalidatiewetenschappen aan de Universiteit van Gent, waarna ze
+            in oktober 2023 enthousiast bij de praktijk aansloot.
           </p>
           <p>
             Zij voltooide een opleiding aan de UGent voor de bijzonder

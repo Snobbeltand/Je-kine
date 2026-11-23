@@ -29,7 +29,16 @@
   font-weight: 700;
   font-size: 64px;
   color: var(--color-offwhite);
-  text-align: center;
+  text-align: left;
+  line-height: 1.1;
+}
+
+.heroTitle span {
+  display: block;
+}
+
+.heroTitle .heroTitleOffset {
+  padding-left: 2.5em;
 }
 
 /* Welcome */

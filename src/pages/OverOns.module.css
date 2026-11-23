@@ -60,8 +60,28 @@
   max-width: 614px;
 }
 
-.bioText p + p {
+.bioText p + p,
+.bioText ul + p {
   margin-top: 30px;
+}
+
+.dashList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  white-space: normal;
+}
+
+.dashList li {
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+
+.dashList li::before {
+  content: "- ";
+  display: inline-block;
+  width: 1.2em;
+  text-indent: 0;
 }
 
 .name {

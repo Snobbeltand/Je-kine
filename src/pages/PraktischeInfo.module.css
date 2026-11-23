@@ -95,8 +95,30 @@
   line-height: 30px;
 }
 
-.blockText p + p {
+.blockText p + p,
+.blockText ul + p {
   margin-top: 30px;
+}
+
+/* Left-aligned list, centred as a block so the dashes line up */
+.dashList {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.dashList li {
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+
+.dashList li::before {
+  content: "- ";
+  display: inline-block;
+  width: 1.2em;
+  text-indent: 0;
 }
 
 .wide {
