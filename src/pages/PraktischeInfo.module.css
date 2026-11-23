@@ -97,14 +97,20 @@
 
 .blockText p + p,
 .blockText p + .hoursGroup,
-.blockText .hoursGroup + p {
+.hoursGroup ul + p {
   margin-top: 30px;
 }
 
-/* Sentence + hours list share one left edge, centred as a group */
+/* Both sentences share one left edge, centred as a group; the hours list
+   between them is indented. */
 .hoursGroup {
   display: inline-block;
   text-align: left;
+}
+
+.hoursGroup .dashList {
+  display: block;
+  padding-left: 1.2em;
 }
 
 /* Left-aligned list, centred as a block so the dashes line up */
@@ -138,14 +144,15 @@
 
 /* Tarieven */
 
+/* Everything centred: text block, then the Bancontact logo underneath */
 .tarieven {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 48px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
   min-height: 405px;
-  padding: 47px max(58px, (100% - var(--page-width)) / 2 + 58px) 34px
-    max(42px, (100% - var(--page-width)) / 2 + 42px);
+  padding: 47px max(42px, (100% - var(--page-width)) / 2 + 42px) 48px;
+  text-align: center;
 }
 
 .tarievenText {
@@ -169,7 +176,6 @@
 
 .bancontact {
   flex-shrink: 0;
-  margin-top: 74px;
 }
 
 /* Bereikbaarheid */
@@ -182,16 +188,18 @@
 
 .travelGrid {
   display: grid;
-  grid-template-columns: 550px 358px;
+  /* Left: te voet / fiets / auto stacked. Right: openbaar vervoer.
+     Below, spanning both: the map. */
+  grid-template-columns: minmax(0, 550px) minmax(0, 550px);
   grid-template-areas:
-    "voet fiets"
+    "voet ov"
+    "fiets ov"
     "auto ov"
-    "kaart ov";
-  justify-content: space-between;
+    "kaart kaart";
+  justify-content: space-around;
   align-items: start;
-  row-gap: 19px;
-  margin: 93px max(112px, (100% - var(--page-width)) / 2 + 112px) 0
-    max(42px, (100% - var(--page-width)) / 2 + 42px);
+  gap: 40px 48px;
+  margin: 93px max(42px, (100% - var(--page-width)) / 2 + 42px) 0;
 }
 
 .voet {
@@ -212,7 +220,7 @@
 
 .kaart {
   grid-area: kaart;
-  margin-top: 16px;
+  margin-top: 24px;
 }
 
 .travel {
@@ -241,21 +249,20 @@
   max-width: 307px;
 }
 
-/* The map is wider than its column and starts at the column's left edge */
+/* Big map, centred under both columns; full image so the attribution shows */
 .kaart {
-  align-items: flex-start;
   gap: 35px;
 }
 
-.kaart h3 {
-  align-self: center;
+.mapLink {
+  width: min(100%, 1000px);
 }
 
 .kaart img {
-  width: 685px;
-  max-width: none;
-  height: 353px;
-  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1600 / 1000;
 }
 
 /* Orange frame and a label on hover make it clear the map opens Google Maps */
@@ -334,16 +341,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 48px;
     margin-inline: 48px;
-  }
-
-  .kaart img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 685 / 353;
-  }
-
-  .mapLink {
-    width: 100%;
   }
 }
 
@@ -464,12 +461,7 @@
   }
 
   .mapLink {
-    width: 322px;
-    max-width: 100%;
-  }
-
-  .kaart img {
-    aspect-ratio: 322 / 226;
+    width: 100%;
   }
 
   .mapHint {

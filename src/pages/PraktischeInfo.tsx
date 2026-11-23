@@ -1,6 +1,6 @@
 import type { MouseEvent } from "react";
 import bancontact from "../assets/praktische-info/betaling.webp";
-import kaart from "../assets/praktische-info/kaart.webp";
+import kaart from "../assets/praktische-info/je-kine-kaart.webp";
 import { mapsUrl } from "../maps";
 import styles from "./PraktischeInfo.module.css";
 
@@ -57,8 +57,8 @@ export default function PraktischeInfo() {
               <li>maandag-donderdag tussen 8:00 en 20:00</li>
               <li>vrijdag tussen 8:00 en 17:00</li>
             </ul>
+            <p>Wij werken in vakanties, maar niet op feestdagen.</p>
           </div>
-          <p>Wij werken in vakanties, maar niet op feestdagen.</p>
         </div>
       </section>
 
@@ -167,9 +167,9 @@ export default function PraktischeInfo() {
             >
               <img
                 src={kaart}
-                alt="Kaart met de ligging van de praktijk, Ooistraat 35, 9041 Oostakker. Open de route in Google Maps."
-                width={685}
-                height={353}
+                alt="Kaart met de ligging van de praktijk, Ooistraat 35, 9041 Oostakker, en de bushaltes Oostakker Kerkhof en Oostakker Dorp. Open de route in Google Maps."
+                width={1600}
+                height={1000}
               />
               <span className={styles.mapHint} aria-hidden>
                 Route in Google Maps
