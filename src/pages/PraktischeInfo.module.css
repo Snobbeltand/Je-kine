@@ -96,8 +96,15 @@
 }
 
 .blockText p + p,
-.blockText ul + p {
+.blockText p + .hoursGroup,
+.blockText .hoursGroup + p {
   margin-top: 30px;
+}
+
+/* Sentence + hours list share one left edge, centred as a group */
+.hoursGroup {
+  display: inline-block;
+  text-align: left;
 }
 
 /* Left-aligned list, centred as a block so the dashes line up */

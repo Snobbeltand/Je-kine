@@ -51,11 +51,13 @@ export default function PraktischeInfo() {
         <h2 className={styles.sectionTitle}>Openingsuren</h2>
         <div className={styles.blockText}>
           <p>Wij werken enkel op afspraak.</p>
-          <p>Een afspraak kunt u enkel telefonisch maken.</p>
-          <ul className={styles.dashList}>
-            <li>maandag-donderdag tussen 8:00 en 20:00</li>
-            <li>vrijdag tussen 8:00 en 17:00</li>
-          </ul>
+          <div className={styles.hoursGroup}>
+            <p>Een afspraak kunt u enkel telefonisch maken.</p>
+            <ul className={styles.dashList}>
+              <li>maandag-donderdag tussen 8:00 en 20:00</li>
+              <li>vrijdag tussen 8:00 en 17:00</li>
+            </ul>
+          </div>
           <p>Wij werken in vakanties, maar niet op feestdagen.</p>
         </div>
       </section>

@@ -42,8 +42,10 @@ export default function Home() {
       <section className={styles.hero}>
         <HeroCarousel slides={heroSlides} />
         <h1 className={styles.heroTitle}>
-          <span>Jouw lichaam</span>{" "}
-          <span className={styles.heroTitleOffset}>onze zorg</span>
+          <span className={styles.heroWord1}>Jouw</span>{" "}
+          <span className={styles.heroWord2}>lichaam</span>{" "}
+          <span className={styles.heroWord3}>onze</span>{" "}
+          <span className={styles.heroWord4}>zorg</span>
         </h1>
       </section>
 

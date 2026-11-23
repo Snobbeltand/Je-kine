@@ -29,17 +29,18 @@
   font-weight: 700;
   font-size: 64px;
   color: var(--color-offwhite);
-  text-align: left;
   line-height: 1.1;
+  /* Two staggered lines: "Jouw lichaam" / "onze zorg", where "onze" ends
+     exactly where "lichaam" ends. */
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 0.25em;
 }
 
-.heroTitle span {
-  display: block;
-}
-
-.heroTitle .heroTitleOffset {
-  padding-left: 2.5em;
-}
+.heroWord1 { grid-area: 1 / 1; }
+.heroWord2 { grid-area: 1 / 2; }
+.heroWord3 { grid-area: 2 / 2; justify-self: end; }
+.heroWord4 { grid-area: 2 / 3; }
 
 /* Welcome */
 
