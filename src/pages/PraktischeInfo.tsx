@@ -92,7 +92,7 @@ export default function PraktischeInfo() {
           <p>
             Wij zijn gedeconventioneerde kinesitherapeuten. Voor een behandeling
             van 30 minuten vragen wij €36. Bij een eerste consult komt er een
-            dossierkost bij van €7,28 die volledig terugbetaald wordt.
+            dossierkost bij van €7,38 die volledig terugbetaald wordt.
           </p>
           <p>
             {
@@ -134,7 +134,7 @@ export default function PraktischeInfo() {
             <h3>Fiets</h3>
             <p>
               De praktijk is gemakkelijk bereikbaar met de fiets. Je kunt de
-              fiets in de fietsbeugel naast de parking stallen.
+              fiets aan de fietsbeugel naast de parking stallen.
             </p>
           </div>
           <div className={`${styles.travel} ${styles.auto}`}>
